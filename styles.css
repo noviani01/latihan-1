@@ -196,6 +196,49 @@ button span {
   font-size: 12px;
 }
 
+.birth-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.detail-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  padding: 15px;
+  border: 1px solid #e1eee3;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.detail-label {
+  color: #78867c;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.detail-card strong {
+  color: #244f3e;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.04em;
+}
+
+.detail-note {
+  color: #78867c;
+  font-size: 11px;
+}
+
+.calendar-note {
+  margin: 12px 0 0;
+  color: #89958c;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
 footer {
   margin-top: 30px;
   color: #9aa59d;
@@ -214,5 +257,9 @@ footer {
 
   button {
     width: 100%;
+  }
+
+  .birth-details {
+    grid-template-columns: 1fr;
   }
 }
