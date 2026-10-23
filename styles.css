@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  font-family: "DM Sans", sans-serif;
+  color: #18332c;
+  background: #f5f8f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(ellipse at 15% 15%, #e5f1e7 0, transparent 38%),
+    radial-gradient(ellipse at 90% 85%, #e9f1e5 0, transparent 36%),
+    #f5f8f3;
+}
+
+.calculator {
+  width: min(100%, 560px);
+  padding: 54px 56px 30px;
+  border: 1px solid #e8eee6;
+  border-radius: 24px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 24px 70px rgb(29 57 43 / 9%);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #438266;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.eyebrow span {
+  font-size: 17px;
+}
+
+h1,
+h2 {
+  font-family: "Manrope", sans-serif;
+}
+
+h1 {
+  margin: 20px 0 12px;
+  font-size: clamp(36px, 8vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.12;
+}
+
+h1 span {
+  color: #5b9b76;
+}
+
+.intro {
+  margin: 0;
+  color: #75847b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+form {
+  margin-top: 34px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input,
+button {
+  min-height: 52px;
+  border-radius: 11px;
+  font: inherit;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 0 14px;
+  border: 1px solid #dfe8df;
+  outline: none;
+  background: #fbfcfa;
+  color: #18332c;
+}
+
+input:focus {
+  border-color: #5b9b76;
+  box-shadow: 0 0 0 3px rgb(91 155 118 / 14%);
+}
+
+button {
+  flex: 0 0 auto;
+  padding: 0 18px;
+  border: 0;
+  background: #244f3e;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #1b4031;
+}
+
+button:focus-visible {
+  outline: 3px solid #8cc4a0;
+  outline-offset: 3px;
+}
+
+button span {
+  margin-left: 7px;
+  font-size: 17px;
+}
+
+.message {
+  min-height: 18px;
+  margin: 8px 0 0;
+  color: #b33d35;
+  font-size: 12px;
+}
+
+.result {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #e1eee3;
+  border-radius: 16px;
+  background: #f5faf5;
+}
+
+.result h2 {
+  margin: 0 0 18px;
+  color: #64766b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.age-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.age-value {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.age-value strong {
+  color: #244f3e;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(28px, 7vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.2;
+}
+
+.age-value span {
+  color: #78867c;
+  font-size: 12px;
+}
+
+.birth-summary {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #e1eee3;
+  color: #718077;
+  font-size: 12px;
+}
+
+footer {
+  margin-top: 30px;
+  color: #9aa59d;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 38px 24px 25px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
